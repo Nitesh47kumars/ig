@@ -1,0 +1,18 @@
+import React from 'react'
+
+const CreatePost = () => {
+  return (
+    <section className='create-post-section'>
+      <h1>Create Post</h1>
+
+      <form>
+        <input type='file' name='post' accept='image/*' />
+        <input type='text' name='caption' required placeholder='Enter Caption'/>
+
+        <button type='submit' >Submit</button>
+      </form>
+    </section>
+  )
+}
+
+export default CreatePost
