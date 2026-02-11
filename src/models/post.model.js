@@ -1,17 +1,17 @@
 import mongoose, { Schema } from "mongoose";
 
-const postSchema = new Schema(
+export const postSchema = new Schema(
   {
     post: {
       type: String,
-      required: [true, "Post must be Required!"],
+      required: [true, "Post must be required!"],
     },
     caption: {
       type: String,
-      required: [true, "Caption must be Required!"],
+      required: [true, "Caption must be required!"],
     },
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
 export const Post = mongoose.model("Post", postSchema);
