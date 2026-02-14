@@ -1,0 +1,11 @@
+import express from 'express'
+import authRouter from './router/auth.router.js'
+import cookieParser from 'cookie-parser';
+const app = express();
+
+app.use(express.json({limit:"16kb"}));
+app.use(cookieParser());
+
+app.use("/api/auth",authRouter)
+
+export default app;
